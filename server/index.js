@@ -11,13 +11,13 @@ app.use(express.json())
 app.use(cors());
 
 app.use(express.static(path.join(__dirname , "build")))
+const port = process.env.PORT ||  5000;
+app.use("/api",router);
 app.get("/" , (req,res) => {
     res.sendFile(path.join(__dirname , "build/index.html"))
 })
-const port = process.env.PORT ||  5000;
 
 
-app.use("/api",router);
 
 
 async function startServer(){
