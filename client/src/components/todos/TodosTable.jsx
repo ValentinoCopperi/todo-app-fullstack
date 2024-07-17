@@ -1,10 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { completedTodo, getTodos, deletedTodo } from '../../services/todosServices'
-import classNames from 'classnames'
 import EditModal from './EditModal';
 import { categories } from '../../libs/Categories';
 import ViewModal from './ViewModal';
 import { useTodosContext } from '../../context/TodosContext';
+
+
+import  classNames  from 'classnames';
+
 export default function TodosTable() {
 
     const {todos,selectedFilter} = useTodosContext();

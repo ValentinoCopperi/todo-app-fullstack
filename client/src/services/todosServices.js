@@ -2,7 +2,7 @@ import axios from 'axios';
 
 
 export async function getTodos ()  {
-    return axios.get("http://localhost:5000/api/todos")
+    return axios.get("https://todo-app-fullstack-ihxi.onrender.com/api/todos")
     .then(res => res.data)
     .catch(err => {
       console.log(err);
@@ -11,7 +11,7 @@ export async function getTodos ()  {
 }
 
 export function createTodo(item) {
-  return axios.post("http://localhost:5000/api/todos",item)
+  return axios.post("https://todo-app-fullstack-ihxi.onrender.com/api/todos",item)
 }
 
 export function getTodosCompleted (todos) {
@@ -20,14 +20,14 @@ export function getTodosCompleted (todos) {
 }
 
 export function completedTodo (id) {
-  return axios.put(`http://localhost:5000/api/todos/completed/${id}`)
+  return axios.put(`https://todo-app-fullstack-ihxi.onrender.com/api/todos/completed/${id}`)
 }
 
 export function deletedTodo(id){
-  return axios.delete(`http://localhost:5000/api/todos/${id}`)
+  return axios.delete(`https://todo-app-fullstack-ihxi.onrender.com/api/todos/${id}`)
 }
 export function updatedTodo(item){
-  return axios.put(`http://localhost:5000/api/todos/${item._id}`,{item})
+  return axios.put(`https://todo-app-fullstack-ihxi.onrender.com/api/todos/${item._id}`,{item})
 }
 
 
