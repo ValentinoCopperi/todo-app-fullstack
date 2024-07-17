@@ -11,7 +11,7 @@ export async function getTodos ()  {
 }
 
 export function createTodo(item) {
-  return axios.post("https://todo-app-fullstack-ihxi.onrender.com/api/todos",item)
+  return axios.post("https://todo-app-fullstack-ihxi.onrender.com/add/api/todos",item)
 }
 
 export function getTodosCompleted (todos) {
