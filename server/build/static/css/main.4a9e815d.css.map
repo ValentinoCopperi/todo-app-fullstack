@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.4a9e815d.css","mappings":"AAAA,cACI,cACJ,CAGA,oCACI,cACI,cACJ,CACJ","sources":["components/ui/sidebar.css"],"sourcesContent":[".sidebar-icon{\r\n    font-size: 50px;\r\n}\r\n\r\n\r\n@media screen and (max-width:550px){\r\n    .sidebar-icon{\r\n        font-size: 25px;\r\n    }\r\n}"],"names":[],"sourceRoot":""}
