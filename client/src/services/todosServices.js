@@ -10,8 +10,9 @@ export async function getTodos ()  {
     });
 }
 
-export function createTodo(item) {
-  return axios.post("https://todo-app-fullstack-ihxi.onrender.com/api/add", item);
+export async function createTodo(item) {
+  return axios.post("https://todo-app-fullstack-ihxi.onrender.com/api/todos", item)
+  .then(res => res.status)
 }
 
 export function getTodosCompleted (todos) {

@@ -7,8 +7,10 @@ export default function FormTodo() {
     const [name, setName] = useState('');
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState("Work Out")
+    const[addTodoError,setAddTodoError] = useState(null)
 
     const handleSubmit = (e) => {
+        e.preventDefault()
         const data = {
             todo: name,
             description,
@@ -16,9 +18,15 @@ export default function FormTodo() {
             date: new Date()
         }
 
-        createTodo(data)
+        createTodo(data).then(data => {
+            data === 201 ? setAddTodoError(false) : setAddTodoError(true);
+            setName('')
+            setDescription('')
+            
+        })
+       
     }
-
+    
     return (
         <main className="w-full h-screen flex flex-col items-center  sm:px-4">
             <div className="w-full space-y-6 text-gray-600 sm:max-w-md">
@@ -42,7 +50,7 @@ export default function FormTodo() {
                                 type="text"
                                 value={name}
                                 onChange={(e) => setName(e.target.value)}
-                                required
+                               required
                                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-indigo-600 shadow-sm rounded-lg"
                             />
                         </div>
@@ -69,6 +77,11 @@ export default function FormTodo() {
 
                             </select>
                         </div>
+                        {
+                            (addTodoError !== null && addTodoError === false) && (
+                               <h1 className='font-semibold text-green-400'>Todo Added Correctly</h1>
+                            )
+                        }
                         <input
                             type='submit'
                             value="Create Todo"

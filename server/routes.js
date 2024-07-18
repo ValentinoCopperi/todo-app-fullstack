@@ -19,7 +19,7 @@ router.get("/todos",async(req,res) => {
 })
 
 // POST 
-router.post("/add" , async (req,res) => {
+router.post("/todos" , async (req,res) => {
     const collection = getCollection();
     const { todo , description , category , date } = req.body;
 
