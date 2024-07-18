@@ -5,6 +5,7 @@ import Sidebar from '../components/ui/Sidebar';
 import TodosTable from '../components/todos/TodosTable';
 import FilterTodosCategory from '../components/todos/FilterTodos';
 import { useTodosContext } from '../context/TodosContext';
+import Footer from '../components/ui/Footer';
 
 export default function Home() {
 
@@ -65,6 +66,9 @@ export default function Home() {
 
             </div>
             <TodosTable />
+
+            <Footer/>
+            
         </>
     );
 }

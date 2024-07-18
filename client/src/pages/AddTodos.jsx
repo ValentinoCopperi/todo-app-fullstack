@@ -1,5 +1,6 @@
 import React from 'react'
 import FormTodo from '../components/add/FormTodo'
+import Footer from '../components/ui/Footer'
 
 export default function AddTodos() {
   return (
@@ -9,6 +10,8 @@ export default function AddTodos() {
        <div>
           <FormTodo/>
        </div>
+
+       <Footer/>
     </div>
   )
 }
